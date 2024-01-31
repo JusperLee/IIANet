@@ -3,9 +3,10 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>SCANet</title>
-  <meta property="og:title" content="SCANet">
-  <meta property="og:description" content="SCANet: A Self- and Cross-Attention Network for Audio-Visual Speech Separation">
+  <title>IIANet</title>
+  <meta property="og:title" content="IIANet">
+  <meta property="og:description"
+    content="IIANet: An Intra- and Inter-Modality Attention Network for Audio-Visual Speech Separation">
   <link rel="stylesheet" href="./files/style.css">
   <link rel="stylesheet" href="./files/css">
   <link rel="icon" href="figures/audio-waves.png">
@@ -1918,19 +1919,21 @@
 <body data-new-gr-c-s-check-loaded="14.1102.0" data-gr-ext-installed="">
   <div class="header" id="top">
     <h1>
-      <span style="font-weight: bolder; color: hsl(0, 67%, 61%);">S</span>
-      <span style="font-weight: bolder; color: #f1c432;">C</span>
+      <span style="font-weight: bolder; color: hsl(0, 67%, 61%);">I</span>
+      <span style="font-weight: bolder; color: #f1c432;">I</span>
       <span style="font-weight: bolder; color: #32c7f0;">A</span>
       <span style="font-weight: bolder; color: hsl(132, 63%, 54%);">Net</span>
       <!-- <img src="./figures/Robo-ABC.png" alt="icon" style="width: 1.5em; height: 1.5em; vertical-align: middle;"> -->
       <span style="font-weight: bolder; color: hsl(0, 0%, 0%);">:</span>
-      <span style="font-weight: bolder;">A </span>
-      <span style="font-weight: bolder; color: hsl(0, 67%, 61%);">S</span><span style="font-weight: bolder;">elf- and
+      <span style="font-weight: bolder;">An</span>
+      <span style="font-weight: bolder; color: hsl(0, 67%, 61%);">I</span><span style="font-weight: bolder;">ntra- and
       </span>
-      <span style="font-weight: bolder; color: #f1c432;">C</span><span style="font-weight: bolder;">ross-Attention
+      <span style="font-weight: bolder; color: #f1c432;">I</span><span style="font-weight: bolder;">nter-Modality
       </span>
-      <span style="font-weight: bolder; color:hsl(132, 63%, 54%);">Net</span><span style="font-weight: bolder;">work for
-        Audio-Visual Speech Separation </span>
+      <span style="font-weight: bolder; color: #32c7f0;">A</span><span style="font-weight: bolder;">ttention
+        <span style="font-weight: bolder; color:hsl(132, 63%, 54%);">Net</span><span style="font-weight: bolder;">work
+          for
+          Audio-Visual Speech Separation </span>
     </h1>
 
     <table class="authors">
@@ -1987,66 +1990,93 @@
     <!-- <div class="figure" style="height: 224px; background-image: url(figures/teaser.png); margin-top: 20px;"></div> -->
     <!-- ？<p class="abstract"> -->
     <p class="abstract">
-      The integration of different modalities, such as audio and visual information, plays a crucial role in human
-      perception of the surrounding environment. Recent research has made significant progress in designing fusion
-      modules for audio-visual speech separation. However, they predominantly focus on multi-modal fusion architectures
-      situated either at the top or bottom positions, rather than comprehensively considering multi-modal fusion at
-      various hierarchical positions within the network.
+      Recent research has made significant progress in designing fusion modules for audio-visual speech separation.
+      However, they predominantly focus on multi-modal fusion at a single temporal scale of auditory and visual features
+      without employing selective attention mechanisms, which is in sharp contrast with the brain. To address this, We
+      propose a novel model called <span style="font-weight: bold;">intra- and inter-attention network (IIANet)</span>, which leverages the attention
+      mechanism for efficient audio-visual feature fusion. IIANet consists of two types of attention blocks:
+      intra-attention (IntraA) and inter-attention (InterA) blocks, where the InterA blocks are distributed at the top,
+      middle and bottom of IIANet.
+      Heavily inspired by the way how human brain selectively focuses on relevant content at various temporal scales,
+      these blocks maintain the ability to learn modality-specific features and enable the extraction of different
+      semantics from audio-visual features. Comprehensive experiments on three standard audio-visual separation
+      benchmarks (LRS2, LRS3, and VoxCeleb2) demonstrate the effectiveness of IIANet, <span style="font-weight: bold;">outperforming previous
+      state-of-the-art methods</span> while maintaining comparable inference time. In particular, the fast version of IIANet
+      (IIANet-fast) has <span style="font-weight: bold;">only 7% of CTCNet’s MACs and is 40% faster than CTCNet on CPUs</span> while achieving better
+      separation quality, showing the great potential of attention mechanism for efficient and effective multimodal
+      fusion.
     </p>
-    <div style="display: flex; justify-content: center;">
-      <img src="figures/overall.png" alt="overall Image" style="width: 940px">
+    <div>
+      <h2 style="color: #f1c432;">Overview of IIANet</h2>
+      <div class="figure-caption" style="margin-top: auto;">
+        <div class="content" style="margin-top: 50px;">
+          <!-- <div class="figure" style="height: 300px; background-image: url(figures/overview.png); margin-top: -30px;"></div> -->
+          <div class="content-video" style="margin-bottom: 40px">
+            <div class="content-video-container">
+              <video playsinline="" autoplay="" loop="" preload="" muted="" width="900">
+                <source src="figures/overall.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-
-  </div>
-  <p class="abstract">
-    In this paper, we propose a novel model called <i>self- and cross-attention network (SCANet)</i>, which leverages
-    the attention mechanism for efficient audio-visual feature fusion. SCANet consists of two types of attention blocks:
-    self-attention (SA) and cross-attention (CA) blocks, where the CA blocks are distributed at the top (TCA), middle
-    (MCA) and bottom (BCA) of SCANet. Heavily inspired by the way how human brain selectively focuses on relevant
-    content at various granularities, these blocks maintain the ability to learn modality-specific features and enable
-    the extraction of different semantics from audio-visual features. Comprehensive experiments on three standard
-    audio-visual separation benchmarks (LRS2, LRS3, and VoxCeleb2) demonstrate the effectiveness of SCANet,
-    outperforming existing state-of-the-art (SOTA) methods while maintaining comparable inference time.
-  </p>
-  <div>
-    <h2 style="color: #f1c432;">Comparison with other SOTA methods</h2>
-  </div>
-  <div style="margin: auto; margin-top: auto" align="center">
-    <p class="abstract">
-      We compare our method with other SOTA methods on the LRS2, LRS3, and VoxCeleb2 datasets.
-      The results show that our method outperforms other SOTA methods in terms of SI-SNRi, SDRi and PESQ.
-    </p>
-    <div style="display: flex; justify-content: center;">
-      <img src="figures/results.png" alt="results Image" style="width: 940px">
+    <div>
+      <h2 style="color: #f1c432;">The architecture of IIANet's separation network</h2>
+      <div class="figure-caption" style="margin-top: auto;">
+        <div class="content" style="margin-top: 50px;">
+          <!-- <div class="figure" style="height: 300px; background-image: url(figures/overview.png); margin-top: -30px;"></div> -->
+          <div class="content-video" style="margin-bottom: 40px">
+            <div class="content-video-container">
+              <video playsinline="" autoplay="" loop="" preload="" muted="" width="900">
+                <source src="figures/separation.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div>
-    <h2 style="color: #f1c432;">Visualisation of different model results</h2>
-  </div>
-  <div style="margin: auto; margin-top: auto" align="center">
-    <p class="abstract">
-      We visualise the results of different models on the LRS2 dataset. The results show that our method can separate the
-      target speaker's voice from the background speech more effectively.
-    </p>
-    <div style="display: flex; justify-content: center;">
-      <img src="figures/spec.png" alt="spec Image" style="width: 940px">
+    <div>
+      <h2 style="color: #f1c432;">Comparison with other SOTA methods</h2>
     </div>
-  </div>
+    <div style="margin: auto; margin-top: auto" align="center">
+      <p class="abstract">
+        We compare our method with other SOTA methods on the LRS2, LRS3, and VoxCeleb2 datasets.
+        The results show that our method outperforms other SOTA methods in terms of SI-SNRi, SDRi and PESQ.
+      </p>
+      <div style="display: flex; justify-content: center;">
+        <img src="figures/results.png" alt="results Image" style="width: 940px">
+      </div>
+    </div>
 
-  <div>
-    <h2 style="color: #f1c432;">Real World Muti-speakers Videos</h2>
-  </div>
-  <div style="margin: auto; margin-top: auto" align="center">
-    <p class="abstract">
-      We conducted evaluations of various Audio-Visual Source Separation (AVSS) methods, including AVConvTasNet,
-      Visualvoice, and CTCNet, in real-world scenarios. These scenarios were derived from multi-speaker videos collected
-      from YouTube. Upon reviewing these results, it becomes evident that our SCANet outperforms other separation models
-      by generating higher-quality separated audio.
-    </p>
-  </div>
-  <br>
+    <div>
+      <h2 style="color: #f1c432;">Visualisation of different model results</h2>
+    </div>
+    <div style="margin: auto; margin-top: auto" align="center">
+      <p class="abstract">
+        We visualise the results of different models on the LRS2 dataset. The results show that our method can separate
+        the
+        target speaker's voice from the background speech more effectively.
+      </p>
+      <div style="display: flex; justify-content: center;">
+        <img src="figures/spec.png" alt="spec Image" style="width: 940px">
+      </div>
+    </div>
+
+    <div>
+      <h2 style="color: #f1c432;">Real World Muti-speakers Videos</h2>
+    </div>
+    <div style="margin: auto; margin-top: auto" align="center">
+      <p class="abstract">
+        We conducted evaluations of various Audio-Visual Source Separation (AVSS) methods, including AVConvTasNet,
+        Visualvoice, and CTCNet, in real-world scenarios. These scenarios were derived from multi-speaker videos
+        collected
+        from YouTube. Upon reviewing these results, it becomes evident that our SCANet outperforms other separation
+        models
+        by generating higher-quality separated audio.
+      </p>
+    </div>
+    <br>
   </div>
   </div>
   <div class="figure-caption" style="margin-top: auto;">
