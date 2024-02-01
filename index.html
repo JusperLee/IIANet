@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./files/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     .star {
       color: rgb(153, 65, 220);
@@ -1911,6 +1912,32 @@
       content: "\f12e";
     }
 
+    /* 自定义样式来减少卡片之间的间隔 */
+    .card-deck .col {
+      padding: 0 5px;
+      /* 减少左右内边距 */
+    }
+
+    .card-deck .card {
+      margin-bottom: 20px;
+      /* 增加上下外边距 */
+    }
+
+    .container,
+    .container-fluid {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    /* 移除标题的红色边框并调整字体样式 */
+    .card-title {
+      font-size: 1rem;
+      /* 可以调整字号大小 */
+      font-weight: normal;
+      /* 正常字体粗细 */
+      margin: 0;
+      /* 移除边距 */
+    }
 
     /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zaGFyZWQvSWNvbnMuZm9udC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtDQUNDLHNCQUFzQjtDQUN0QixtQkFBbUI7Q0FDbkIseTdSQUF5N1I7QUFDMTdSOztBQUVBO0NBQ0MsY0FBYztBQUNmOztBQUVBO0NBQ0MsK0JBQStCO0NBQy9CLGtCQUFrQjtDQUNsQiw4QkFBOEI7Q0FDOUIsbUJBQW1CO0FBQ3BCOztBQUVBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCIiwic291cmNlc0NvbnRlbnQiOlsiQGZvbnQtZmFjZSB7XG5cdGZvbnQtZmFtaWx5OiBcInd0aWNvbnNcIjtcblx0Zm9udC1kaXNwbGF5OiBibG9jaztcblx0c3JjOiB1cmwoXCJkYXRhOmZvbnQvd29mZjI7Y2hhcnNldD11dGYtODtiYXNlNjQsZDA5R01nQUJBQUFBQUJxWUFBc0FBQUFBTXhBQUFCcEdBQUVBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUhJa1lCbUFBakJBS3dBaTBaUUUyQWlRRGdrUUxnU1FBQkNBRmhBb0hoVkliQml3emtuVmFFNHlLK2lnMmxhSW9GWk11KzY4VHVDa2laa1g5aFFnYVprS0YxUFJ3YUYxS2VudnZuMTFjV0N3NGNCSHRGRVJ2N3o3M0M4TXFqeHlTRkNZUFBHdnF2MHNHaExwRXJJQkJieXhjNVl3aVlWQ09oY3Z6WFE3ZDdJQVF6Q3Zpd1Q1UUVSbTIrWWRvbS9mLzBJTC85SnhCbEFVSVlpUnRveWhZYzJpdnRGbUdzUXB6VmM1RnQ2c0tDYmFjTjB5amxQUXVDVUlRZ2h1TThWS29lZCtwU2MyT0pHZG9DQTA0STJEQkFPaVA4aVBkcC9UdXp4QTZUdHNrN1lEWnNhK1p5eEJDKzFWcnpqWENIakp5d0N5THB4OEI4ejluMnVTT0ZXVkFMQlNSUlNYLy8wM3Yrdk92cjAzYmUydjZqeWpMRFhMQUkySUZKTlByQ0pJQm9wb21OVFU1TzZOWld5YXdIZEtMVDNrd0cyRVFCRGwyZ1VJQ0hJVjZYdUtDWU9ueU9GQ2J6b3pSa3JpNEhFVnEvb0tMeDlqTTAxVmhyQmt5UnczdmtmbkdWeEMwT1U1QkVSbytIS1JSMmxzaTRpOUhBSncxczhKV1ZEVjB1RGc5c0R6ckxtU3phQUJPQllQcGliRUJwOGRPcUNBOElMN0EwUUV3ZFJ4ODlpK2dNRFhJR2hiQnp2QmRlQ3A4SGZGR1ZrVzJSVW5Bd2pJWWdwa1p3aGNJc1RpUmlNQTBjZEJqM0twRENOMVVQTHFSZjZoRWFvNWFpRTB0WWJJMWFtYWpWSmxrS3lzUzJaZzRxR1N4QUVqb3lIdFppQUNDVFNYOElzeUhVU2JpVDBPS3ZnUElFQlpZSVh6RUtIa1dndVJVWm9pZE1qa0NrYWxRYXBZa0l0S0F1TXdkSW1LcEJUVUxxMURJMW9tVGRHYzBkV1dDbE93eWtuamhRLzA1MU9XWTcvNTVxbVpQdnN1elhOWU5QYVZLYVpaa1lTcEJ0T3gxV1dYcjJkdkxYdU9JTHR5bXFvM2lEdHVpMU1uNXVpR3F1Vy9xSWsrQTZzQStKVG0xbnh0emFmQ0lKRnRTVkx6WWpPOFlSelN3MEdYaUlHSEd6bnk5SkpuYXFWRGtMTzBSalpIUWhyS1U2TmQ4UEJFcjhIWllseTRGUEYrVUJ3bGNwQllvT1E2eGdaM0tVYjFVUzRRTlNWMWs0TUMxTWMxUVhCbXR5eVRiZkpBNHlSM1Vlemt3UGZUMU1HelpQZyttaCtuVU1xTUh4YzFwSkQvUkNnMVQ2WjA4dnAwQ2Q5anBwaXRWQ3A4MlNHdmdiSGtVSHIySGg5d2hxb1R6Ulc0R01vSXNLd0ZFOXFoMGM0a2dzd0NEcU1paWVWcHZ2cTl5Y2hHaGZIcVZYR1BrU3QxWjQrNUZUTStncUhrR01xYlRTTmk1S2ZYcENHaE1BNHpqMWxtM0p4SGVrSVMwdEZweXVsVnFOSXVHZFdnV1BMZ1FaZjhCejlhYkQvNUlEV0NBRUIrQk9JZVcwY3BoNzVYR2tpSXYwUmN0eTYyUjdQMHhjQUtJQUFucDVnb3o3bE9ESk1CZFNnS092THMxS0dBQlhHZmlJQ2NObXJUck5tSGVaaXdwSG85UTJ0aTI1Z2RNV1l3Rm93MGw0S3FjYkUwOWs3b3hMNlZGdFFJdkRlbzF5cmJWTE5sVml1aHo0Y0xXUm1xanlJNUNIR1M5cVcvZlhwVWtSL21ZQkpVUkh1N1lTU1NSS1ZUYThRUWJUQmFidytYSnlNckpLeWdxS2F1b3FxbHJhR3BwNitqcTZSc1lHaG1iZ09Ba3hLV3VwYnJnMVFCUG5NZ3VaVlRaa210VElub3BYUHYrb2wwNk9jaktEZjE5VmRJeEg2em5BWkVmUml0S3B6cVVhVUc1YWxRb0FDbzFvU28yZFAwK2FVU2JiS0JkS2JvMVkwQXlNS2dXUTFLQVlabkFpQnhnVkEzR0ZBTGppb0VKZWNDVUVrd3JBbWFVWVZZNk1DY1ZtRmVCUlZuQWtseGdXUWF3SWcxWVZZNDFWVmlYQkd5b3hDWjk4MEdNWWNWQ0hJUWdIc0tRQUltUUJNbVFBcW1RQnVtUUFabVFCZG1RQTdtUUIyV2dMSlNEOGxBQktrSWxxQXhWb0NwVWcrcFFBMnBDTGFnTmRhQXUxSVA2MEFBYVFpTm9ERTJNKzgxZmpnQ3ZnTFB0WEtnUkwxaXU3eEpGakNmMVdRaURLQlFxQ0l0ZkFpZ0NIVjlJdUpHRWlDTWtqaklpTGxCaTVWa2JaMkpDYjdSdjNOYllialNFeWppQ2hFT1NURng4STkyd2g4TjV2S3hPbHlXWnE3RXJIVm5NY2dTaUtKcmpFVTJTRFpQczVqQXRUSko1RVNpbUIyZjNJMjkrSVk5eEp1cTZ1Zy9MUmRtVVpKUUNaVmE5TEtLVWNjM0llWWJzeFRLQWFZcERZZlV1WGhNMWNvR240SEROUUpIc3NVYURVVkFrckhCQlcrR2F4K0dTUlovbmJjM1p0NmZmVmxOdlRyMmJ2eHhCR2NlNjFRSWkzQzl2Zk5EdnJvbXJiOVg3NjBxRXZKblpNYVErQlBlS1ZrdkhzWXdpRllhd0QraDlvZmNZTFRBbTRYNGZxV0Z1RVFCVWV3amF4RGZjUytTOG9Jd0lRWnhaMWl5Q1R2VlVQb1I5dXNNamJDTTlzaG5NM0pPWmZ5SlB5U2hlU0FLakRTWGtrMzJHVWp6Q0k1elVUMkJDUHQ1cUpKSUZkblU0a2FSWDFBZVRDZVBjWm1Jb0o5bkU2UloyN2pnVFA0QjZKRWNFdm9hSnZFK3k1K3Q1b1I4WGlzL1dPYWpueTVMNGpCcmhTNGNqMVpSZEdETi9ER2lMRXRjMTFBakdBOTBRSnNHQmx6cEMxQk9tVytoWmhnRTlPRHFSSkdTTUpYVUR0SWs2MDEyeXFlcWlnWm1vM3phVnFCdmtjazhuS0Mrd0YxTmlXRElDaHVWaUhXK2dEVDBta0JkbHlRV2RJd2dRbE5BaE9DV210YzV5T0xXY0RRNmVHNGNoZzRod0JCZ0NFd3VJL1JVaHBNSWNRZXJ1VlFENkFBTWdhQUJ4N2Q0REVEL2NRS2puK3Z2OXNoTmozUTRvT3RkMUpWUDV5NDRia2EvbGl5blR0OHQyODNPVWQ2c3BrVzRzdXpVTjY1RjM5bnZENzlGeXBzeS8wSTRScUdhNlJTQU91SG16bm92bkJOa0FTdC8yRWF3ZHhHMFY1b0RieHhJd0RsUlFUZ0FNdUEwRFB5VW51R3NTdDJVRng0c0RvVzF6WVpyRlMxTU1tSVJzMndlR1o5V1E4bjAzSENqdFF1aDZGblI5NkJ3Y3hGNHNiSG1lbFFQQ0FoSHJTOG4yZlkySXp3U2k1Y1VpQVBvY3BubHlZcHdQay9Pc1pLQzBPNUQ2S3I3cEgvQnZKaVdrbUtESmd4RERnNGRLbUZFM0Z5cnFxcmxHK3NvVm5nNGdUL2xJRlFGQUVJTUsxaHdmSUU3VDh5SkRlMWJxSm9rRHhJVXJPTGJoQ1lZVXJ3TXk2RFplQzBUb1N6Y284ckIyTExlbVNkWU5NRUxlWno5bVlUNmFpMEF2ZUxSSnF3MktrMjNHam1jN3hzbVlPK05FQjV2dFNFMFpsUk9EeE5DT0kremdJWDdDTll1NWtKYlNsV3dsenRZMXF0NmlybnVnbXFybVFzSW0zRlRSN002THRXRkVHT0Y1N3gwWkc5Um5Ebk5yTmRYUnBPR2pWMlVyQTNtMkxDZjR0UUZLcXo0V3VhN3RPNVhLbFViZUZheEk3Vm1sTkVpUnBpTmFwWWNFenVHd250TTV4ckgvaXVLQmYwK29PQkFidE44R3h5SVE5dE9xWWQ2a2dkQlZzWE5NNWpON2c4Y00vcFg1ekNMa3N0L3ZmbjljQ0l4WnRGY3FlRUs5dlNxdWpXdk1hMnl5bkI5am5veTVjcU5obndwU2IvTmp4emZmRXhuSFdMOGIxZlVCdjdDNXgzYlByVGJxR3pkdS9qNzY4ZmlaTGpQRmVMcVE1UWhRQWllcWx4L3lRNzUxd3VHKzlyRThQVEo2ZjY4ZVBmZTBjUWFLeUtqbnlRSDZnczZReWI0Q1pLM3I0V1dUaElaOFMrQVR3bnpYSklRVktYMlNkczRoRjBTM1dldHY0RjJUbitoSGU4dFRBdlFRMTk3aEpHczgxcDhNT2dCdHN3NjBTOW9QQkZ0NFB4dXM0RjBnSEc0N0FwaUJKSVFHU0RJOXNqRkt1UDFjQmVRVVlhaWlDRDVCWWE5YkUrR2VCYU1oanU1NDVZL2xFMXpRMzRCNE9Dd2tQU1BXOFJqS0gvcWJ5RGZlWVIwUDljdm5JWCsyM0IvR05GK0hPQXQ3QWVHaW5zcmZ3WVBPc3A2ZzNhS2xmL0lINnk5SEgyNytkOGJkWUN1R2w5ZnNGNTdWUWFjT2tDNFlOTk1WMXJSeFFzT2hDNkw0R1hnaytEdkQvQTV2WGtYTkpNVjB5YklPTmZRT3dOa0IwY0JZZDBHSTl2U2JDYy9XZ1J6WUR2ZytWUzVnZ0U3RHNZNEFCQW5keUU3eFRXUW5SRGZoM2Q1QWIzaGtaZitFV2l0NS96YVlIRytEYjZUZkc5Y2Z2MWR2SDE0Rm9yVU0yQXJaTm5NSW5QMTQvUFBYVTJsaDl6bEg0MnZtVnVjak9wMGRreDd4aUwrZTBnNHYyVTZwK1dNL2ZybUh5YUdEOUlTYWVYZHVmZXlER1hkbXhVdTJQUmp6Wk1JVitIRmxpNXpvYUNtVTBIaVNCbVdHOUMvUVBlRWdhMlQwdzVuMVlaVXhWeGFNdmp2M1lUaG9qd3JEbWJpcUpWN0NMYlU3RHhZOG1TQzFsaktLa3ZtWFVSQXA2bmttY1pHeVdYMFlFUzVDeXJmWjdkR1gyTWQrR1dXWlpiN3Y4QUJyaTNhTjVFR0FzZllBdlRVS3NPZm9qUzRSYVEvZzQ4bnM1b2pwREpHcHRmeE1OcGJtaWlMZG40empzeHJEcDFITVozU09tVU1uc0lFVlZwcm9qeHNmTVJHUDlCUDVXRDA4UUZ6VFZiWnZ2MldmMUNuRUE5bFVKcUdlNWVtUmdiUVpmdlc5Nk1KZUNpaUhIT0FFSW94dkl3eFNmZzVCdWNDT1hKaHk2aENndGtNMUFKUXBuUUIrdkN3Tkl4Smo3SG4zbEFkUlFTNHFOUFRGdFRjWDMvQnByN09DSDRmVjNpcFpsTVh0UFg0WU5DVUE4bDg4YmEzanVmZGVOT3l5QU42NTZKYzkxS0NUQ3NaRGtDWWUrYjVLaDQvUkx6Y2xNTW5mUHlrZ2VYdEFpbjlpMHNjZXNJM0E0RjZIZ0pUdEFjbitTVW4rS1lIRDMrY3VpejFsaWJDY2lsMldPOXN6UFNBK2JzU0l1RmtFdE1jSDdOSkYzVDdmckRycnQ5aHNlZ0NOcFVhc3FtOHdOdFFid09HL2FzRllHSXR0bHVaaTROUkw5Y3VZY1MzaGN3MjBUMjdlVEVudURRRCtmYzhWam50ZEhXWFYxS3NXcnlXeUxQbTZxTkxJeU5Mb1JKdHJOVzkreDRBZE8xWWF1cjRWM0xzeGtEMXJIYTRNWnd5RnpQNmdybUxWcXFZSDl4ODhhQVJEK3FaTis3QjM3NXk1LzRIdit2dVMwakwyZnRJa2dMM1ZPaU9kYlJGdHZiRHpMajBQNCswRjNzRFMzaDhUOTdLK1RROWtTMW9uRCt2VkZ0SHV6SW9vckpMZHJXOHY5dTVxNDRNSER4OE1oWkNIUStHZFZBOGZnaTNqRDJ4Q3UzNXBneS9OZTJ4S2EyQ2dWV2s3SU9ETld3TnR5Z09NSjNLREpkTHN0a1JzU0pib1VyL3FKRzI1NmRkVWlhNk4wZy91Y01pOE5jSTFqc3pyMkZEaFVPeXl3OUV1REJaMmJlTlEyelhITHBQbEJnL3VZanp0dVk3Q2dMcERkTndGcWs5OGxWZVRsMm5xMU5lUnBiYTl4TzQ4YVRZMzAwMzAxd0VUTURCL0RxdExSdHBjeTZ4VE1OY1c3SkdsZGwzV00zZHEyVm9XRUZWZDNPZ0ZrU25PalpzYUtyZ0djMlZvdmpZdkw2UWc3RkYraU1FRlc2cXVDZ1hjNTFKL2RkeDQvOGlOR3pFUmRrNm1DZHBqOTdYSVRDYVp4YmRUd0ZseWs5elNDVkZ1WmhnNUk3OXVNck92WmJ6VEpVd2E0SEFZSEdiTGdPUXFzeVBld1U0cUhpbkM0MUVkZ1RCWWpwK1dQbjJ1STRFd0VJUWNhZHJKeFdQallwU0xsSmFZc1pUaU5xOC9tM0twVzFPSG1QWW5qTnZsdWVtUDF5TlBLaXkyNS9XaC9zNmhLdHphM1dLbzVKeDNZUG5OZ2lZYzlHdU5aM29hRlhDazV6b3J1Y0VTM1JvUDJ2ZThnYmxITXlQN0Y0emdkOWVsUlE4aUQwOG5PZWFlV2ZUalZKUUtRdmVWbEpKUWhyclpjMFpWdmMyOS9IZEJId294MzNRR0E2cm5yZS9rZTlubjJCSG5VOVgzemZseG03N3QxV1BsbXdINTdmZndQdTZWZzhJRGlDRWhCSGh4UllrS1BKRUFNL1M5aUFnZGpaS3pLMExOWm5YSmJKeGVMeEFKZ1dOb0t3N1JhVEFjakNNRkk5QzVDQmpGQkZxTkJVQVlKSldhbVVGcWxBOEhZV3ljbVBoVDZzTkZRL3gyRXdaTGxlN0tFS1pRZytwZ1ZUQUU0V0E4aVJCYkVRS0pNUlREdzZqQW9BMlc1TWJrZWdFaWZveVhiRWpxME5SK01pUW5LUHFMbVBaTVkrSytNc2NRNytGSDVzTk9ScU80VmRJcWJ2eE1mb0R0WlNiWGoxd2dOeHVJNUZtWUo5Zkd4ZEl4VXFJdlp6U0hvbjFHUklkS2g2REVaMW9hK1N5Mmw3R3Zia3VPaW9IRmNtTGRHZTdlSEc4SHg4YWhTVjhRM1JGbUFOZWZQSm5lU1JtR0QrQWNzTDhaTzUzNzUwYWlTS0ZYbEFLalRUNmZLYWN5aDBvYnhFTVlwY1JPRXFvRXNrLytaVWZLbXF4ODYwOEwvencvTERsMGQzZHljaGlvRHd1ZFZCOWJuMVFmVTkvZlRITjZsNXJySVgzYlV1elhvZzVYRkh6OElpb2NrVC9zY0lINXZ3RnZOZzRmYzd1T2JuQXpCcWNmYTd2QXNDZ3hvRGlaTEJLaHhXbE5NQnRMb0tReFRic09KVGRQSEdzcXYzVFBuWnhzYnFuZHN2Vll2Zi9qOWRBN0FXKzVKTU9qU1Q4b1BrckhnM0NlVGtvbUFpSnVHTk5zMjNlZTY5cUFHd3pCaFlKMFR2RkZ3NFpIcjEwN3JoNnFMcXl6TjFZVWtTZ0lNU09SeXFKRFVkS0VrZ2tFSG5hZ3FTUGlLMjBkWkd0b3gxYmNuOXh3OC9FNG9hdkVidElPaUlyd1VITVo3T0RWODN6aVk2Y09uRHAvcGJwb2FkcXN3aTJuS3ZNV1RCODE3aFFqd1djaXVRVkcrOWJybVFabS9QaEszYUNZbUVHNlNsakE0SUp0UVpJTVhOL2Y4U0Q3a2MzYk90WUFJQUJlZHZsNEhvN3MyanhqMTkzblo4NDh2OXU1YUhOSDVHRlBidzhDc3Zrd1FyaGNybEZsMkZVYS9yVzVFNjhKTkJtcUgwMU5ZQ1NCZCtUdDI1L2RqMytPZTR1YzhNN1Y3dU81T2JKRFBWdXYvV1VNNGFYNEIycVVhZ2NCWDh1a2VaTHNLVk95SlhuU2N3SUdkOHVTYkduZU9ZNzI0ck41Zlh0R2JidTV2WDkrdk9Ob2dsWGphU0w2RlpxR0J1aGQ5d3BkUkcrUXFUUU5IYkEzbkVvWDBkNTU2M0dwRUI0aEo1V2hDRHhwS0l5SGFjYWxLTkk4dll3Z0tJWUxZUGVoamlnQkc4a21pTE9wS3F3QmVTazNESGhjcTJNSmYxczExdDlDbHJESEdQZjE4bzdwOWduMTZZNzJibnRzMm80MU1VSVpUZGptM2ZNMXo3emU0Tk1kNC8yS3U0Q2lYc1RlUk9BZG5GQ2c5dFUxVU1LbXNXYmhmTlpNSDZrSmw0elBJM3IxaDRrNCt1amtXQXpQVHlYdzh4Z0VIS015d3lhUXBtY3VEMTErczN5NSszSWdYZTZORGcrclNMbGNLYktDN0NKbHFrS1JXaERBZ3ZQZ1VRSFYrT0RVWXRTU1c2UHpNZkNUc3BQODQvMzlNaVJwRTBnNFBHLy83Q1FEWCtlVFc0TmE5dkRYeHF6bGc5QkJoZFFnOWg3N3pIMlVKUGtRQWMvajJWaHZzU0hKWUJtbWJSTm8wMktXbkhuQUVCdVNEZkZyTnE0SHBoVzBhWWRaREowdm90dWlxVDNuQzl4NmFQY0d6VnY0QWJ1TzNWOVFNZU9iV0dqUERkNWt5clVMVGFjQ1NnbjhJcVFBY1IrU1VYM1YrRmw0a1ZmbWdENHBHUHZDLzNnYzExTHBWU2oycytDNWViWUkxa0gwSkYwSXlncmY5dmsvUEJFYVZnNWdkQUlQUnVEWld5RUdVTXlBM1A1N3lZOG1ycHM2bGI2VnZtRHF1TTJIY1l5RndxSytJS2o0NzkvRk5VTTJhQnJOQ0R3dU1lUi9mZUFQbTFsdWxNbU1jck10UHRBMDhtOWhIcjRPUXhmK0hSbG9pcmZoVURLalVXYVdBL1diTXBmVmRTOGxEYjE0c1p6WEJlbTJNcHVONEdIYkZ1M1VTVHVrYUNacVRTUEp3eFYyb1Y0dnRDdGlZd1pheldnWjJoSFl6ZFkxZEt4Q2FOZnI3WG5RaSttZStneXR6N0N1eHBqR3JtRStXc3gzei9RU0haeDVKNkZvWEZIQ3h6dUNvSWl3d3FKd2w0QmZ5SWdnd1IydzZtWFA1WXhmTXBRa0M3amFYbUt0dm9QbDNndUZpTUdVNTBjY1RqRFAyRUZXTjdPVzRMaGJ4K2NGeVhYMTVKQjZKaFhuczNpcVMrMUx1eitFSUsxQnFoRnNjcUZKd0ZHVkVQMUtxSnZFSFRZd1d5aGxUUGlDcHI3bW9pUkpyek16N2RHa1Myam1SUmxFQ1BwMVoyZEpYL0RsU3gvbkVCWDJkNjhBY001SlppL0Q5a0FrV0dQaTZlS20zVUxYWXY0ODZhU2ZzamkxVWQyRVlrTUt3ak5Va1ptYUJGN0cwS0ZadmVQVmpraVZMZFE1R0daZ2kyOXdld0xKK1hOZWJMSWhCcm5KbDJkZzJPMlhDamx1cGpMaG9SQkVXaVFDMzd1VmFRcGREMlZvVkJhQ0psRDdFSFdjT0w5cXVDRkZ0UEM4MHNwTzVLWVdLUlZwYVlxYnFwNmM0cGFRQWtiL3pQWDdWZGNYcUw1OFJWbldhR05BU09LNEJDcWl5cFA4ZUVzdkluWVNXNGh0QkhvUjdYcWVoSStqSmlTT0N3a3dob1BGRitzaFVCdEthT3RGSjFGdm9qdk5LekVoZkYybXNGZmE4TEZ1ZWNHMHZLb0IxYjEya1FVSjRZa01sSm5nbVJaazhhdU16YW5ocVJjbWhDVmk1eGU5cS9ISVRPbnZjV3pwQjZXdTJXZHZETGtkWU4remt5ZkxhblFzWFUxWmw3VEw2WHpPYkplMk05OFVPN3VrRG1uWHNvN25UbkNkUENsQ3drZk1HMjNKYStCVDd0MTBmVWJLOVYrTjJXNWtrWDZQOTJyK01xbks5ZEZiQ29YNlZEK1luZXFSSjQ3Y0duOU9JdGJ5RHh2dkNmTGVjZDV6aU95MlJIM3RiQ0tnRHEzbW1vSXdaMGlJTTZ6Z3NZQ3g4MFBhNUI4enIxbEhkWVk5STJQeGIvdHZnT3VjTXZhTnl6M096V3dwM3RGNWlaa29ZRUFLWHFSWWd4WVh6RUFJb2lTS25SVi81bkRmbG5rejQ2WmZmb2Q2cEpTdW5uams2UEhtQUhnUitLOE9YNjR0V2JJNm96dysyc2FEQ2JRQ2NqSWRZVVpJVEFUYjhaMzN1aTdpV3dHei8zWHdpMVBKSmZQRlIzOWFCcVdqenc1VjE5YlpXeXZyeUZRY0tUT0Z4cVl6b3JnNWd5Y1FlcWtmdE0rUCtEYWlIK1JvWE1mWWNiK2o1ZFdqOFpwSkpYYXplVUJLUkc4Tmo4blI3bTRWSk5tbWpaZzJmNGU2YUhQQnJKcXROOGRXcko4eGF2WWJSb3BnTW1VUnhIRHVOTEVzN0tTeVY1elNaWDM1RHArTXVSYXdxUnQwZUsvcjVhaXBCS3JpRVBiZnFvZ0I4ZHR4cnhBRFo0ZmZSVkxnZzJuUUpuZ0VQUXVpaFJyd2U0VHVoQ2Z5YUFhU0R0d2FxQ1V5SGVHbndzZmhlT0FPSTUzMENrSUFMZ0dwZDk0Rk5tSVJ2S3JaUkZNd0c5blJFNmU3a1VjUVB4ditqdEgvRmRjQkw2ZWV5SEhnRnNIWDVXNjRwdWNmMEp0SUJPMWFDSWR4ZkdRcDlJQzhyQTd2UU81NExpQnpiVldIdmlLM0xZSXlBYmNSdnNvVkllWGNHV2hQNUdqRU94VStpYWdpU3pOTldLT3dXWGcwLzErcVBIQnV5akphdm52VU54SzJXd0RLSlQ4NU1HNW53c21MWjVNQURNRElqRTkrMlhNY2ovTkgrMHRSakcwNUZzbk1jSFkwbFd0RTVnWjVvWVozMlJzbDdJQS8yNTVqRlJmOEhtWUhmWVhSMitDTGZnNmIwaEFBd0JaSUFSMWtHQUJBSVlrQTlDempVU2Y4SGc4Qm9qQUJ2L2haaVNjV0NhU3p1RUIyUXp5Z0FzK0dCRUFFc29ZVTRFOXhiQ3BneW9FQUNFY0dFS0NEOG9DRkEwZXdTR0FUaXd0c2FZZ0hIQ3NhRWdBZDdHbElBWmxPblFrVlNBUHZvYTRCeFZXVmRlbWwvUWFYRjlhT3pkdDlaWmJXMWcyb3F1UUhLVlRNazRncnJTeXRMWFNWbHZDTGh2UHJodlJUdTF4bC9MTGFxZ3ErcGFyU1ZWcGVYc1d2cnEwYVdGcnNVdlIzdWFvamxNb3kzaWVuS0s2cUFFTzVERkNzU3FVNjZVcjFNMWk1UXJYODBWRHFUS1ZxMVVWb3RHMThRUlJVeFd3Y3FSUnB1cEJMcVJLcHlQQ3NlSjBoK2xGekVha01QeWxkcTBvRlBvc2FFc1RsRWE1YWtHcStQRkNwNG9ncTlGY2cxZi9YQXpXNU1sR2lzR3l0NkpJRU5Jd3hibzVzYXlNanBOTEdzdithS1haY3ovY3I1Uy9WZGx3dms4M2xDOFZTdVZLdDFSdk5WcnZUN2ZVSHc5RjRNcDBSUHdpaitJOG02WHl4WEswM1JzWW1wbWJtRnBaVzFqYTJkdllPams3T2NTb3Zib09oTEx0Rmd5ZUtNM2oxRDFOa3NzRFRCNmJ6L0FCL1Z6TFZKV1phRjQvbGZOQ2FIQi8zSzZkOFhwSm9IeXV2cjRwSnpPVDZCZVpoMFdJQmZzZU1LRVVGNHNuNHV4bTExaUNtSW5pMDhwTGtvamFpRUEzcTBKbVRIVkZKTHZ0dHJiUUY5UmlMa0VQK3lGWjFSV1JTek9rVlRJMStvRzNtRE56R01SakJTRm5qV3k1TERuUkY3bldHQkJWQjNxVW55TG8yUmJjUXF4RFhkL21uUUV6cEtyWFZlZEM2aTVxMmE2dmtpNFlzbm5ocFNuKzhVbnQ3Q1ZLQ1J5RVZzSnlLZ3lJdW5EVlU0dEZyRm5ENEc2amx5NUFNYzVoOVdldzArSkl2SW1Xa0wvcGpNZDk3aVQ2eXFKZ3VoRmVMdjlTNUpORTBIb09DZ29GeElMSW0vY1Z3Vm1BUUFaMEJUL2szSldrdmJ4ZXhEK2NuTVJGNUd0bWEyNXQ1R0FjQUFBPT1cIikgZm9ybWF0KFwid29mZjJcIik7XG59XG5cbi53dGljb25zIHtcblx0bGluZS1oZWlnaHQ6IDE7XG59XG5cbi53dGljb25zOmJlZm9yZSB7XG5cdGZvbnQtZmFtaWx5OiB3dGljb25zICFpbXBvcnRhbnQ7XG5cdGZvbnQtc3R5bGU6IG5vcm1hbDtcblx0Zm9udC13ZWlnaHQ6IG5vcm1hbCAhaW1wb3J0YW50O1xuXHR2ZXJ0aWNhbC1hbGlnbjogdG9wO1xufVxuXG4ud3RpY29uLWFjY291bnQ6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMDFcIjtcbn1cbi53dGljb24tYWRkOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTAyXCI7XG59XG4ud3RpY29uLWNhcmRSZXNpemVEcmFnOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTAzXCI7XG59XG4ud3RpY29uLWNhc3VhbDpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwNFwiO1xufVxuLnd0aWNvbi1jaGVjazpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwNVwiO1xufVxuLnd0aWNvbi1jaGVja1NtYWxsOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTA2XCI7XG59XG4ud3RpY29uLWNoZXZyb246YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMDdcIjtcbn1cbi53dGljb24tY29weTpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwOFwiO1xufVxuLnd0aWNvbi1jb3B5U21hbGw6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMDlcIjtcbn1cbi53dGljb24tZGlzbWlzczpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwYVwiO1xufVxuLnd0aWNvbi1kb3duQ2hldnJvbjpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwYlwiO1xufVxuLnd0aWNvbi1lcnJvcjpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwY1wiO1xufVxuLnd0aWNvbi1leHBhbmQ6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMGRcIjtcbn1cbi53dGljb24tZmVlZGJhY2s6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMGVcIjtcbn1cbi53dGljb24tZmlsbGVkRG93bkFycm93OmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTBmXCI7XG59XG4ud3RpY29uLWZpbmQ6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMTBcIjtcbn1cbi53dGljb24tZm9ybWFsOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTExXCI7XG59XG4ud3RpY29uLWdpZnQ6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMTJcIjtcbn1cbi53dGljb24tZ3JheUxvZ286YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMTNcIjtcbn1cbi53dGljb24taWdub3JlOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTE0XCI7XG59XG4ud3RpY29uLWluZm86YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMTVcIjtcbn1cbi53dGljb24tbGVmdENoZXZyb246YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMTZcIjtcbn1cbi53dGljb24tbG9nbzpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjExN1wiO1xufVxuLnd0aWNvbi1sb3ZlOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTE4XCI7XG59XG4ud3RpY29uLW5vUmVjb21tZW5kYXRpb25zOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTE5XCI7XG59XG4ud3RpY29uLXBhcmFncmFwaFJld3JpdGU6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMWFcIjtcbn1cbi53dGljb24tcGFzdGU6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMWJcIjtcbn1cbi53dGljb24tcGluOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTFjXCI7XG59XG4ud3RpY29uLXByZW1pdW06YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMWRcIjtcbn1cbi53dGljb24tcHJlbWl1bURldGFpbDpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjExZVwiO1xufVxuLnd0aWNvbi1wcmVtaXVtRnVsbDpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjExZlwiO1xufVxuLnd0aWNvbi1yZWNvbW1lbmRhdGlvbkxpZ2h0OmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTIwXCI7XG59XG4ud3RpY29uLXJlY29tbWVuZGF0aW9uTGlnaHRDYXJkOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTIxXCI7XG59XG4ud3RpY29uLXJlY29tbWVuZGF0aW9uTGlnaHROb1N1Z2dlc3Rpb25zOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTIyXCI7XG59XG4ud3RpY29uLXJlZmluZTpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEyM1wiO1xufVxuLnd0aWNvbi1yZXdyaXRlOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTI0XCI7XG59XG4ud3RpY29uLXJpZ2h0Q2hldnJvbjpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEyNVwiO1xufVxuLnd0aWNvbi1yb2NrZXQ6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMjZcIjtcbn1cbi53dGljb24tc2VudGVuY2VFeGFtcGxlczpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEyN1wiO1xufVxuLnd0aWNvbi1zZXR0aW5nczpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEyOFwiO1xufVxuLnd0aWNvbi1zaG9ydGVuOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTI5XCI7XG59XG4ud3RpY29uLXR1dG9yaWFsOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTJhXCI7XG59XG4ud3RpY29uLXVubG9jazpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEyYlwiO1xufVxuLnd0aWNvbi13YXJuOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTJjXCI7XG59XG4ud3RpY29uLVdvcmR0dW5lQnV0dG9uOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTJkXCI7XG59XG4ud3RpY29uLXg6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMmVcIjtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */
   </style>
@@ -1993,16 +2020,20 @@
       Recent research has made significant progress in designing fusion modules for audio-visual speech separation.
       However, they predominantly focus on multi-modal fusion at a single temporal scale of auditory and visual features
       without employing selective attention mechanisms, which is in sharp contrast with the brain. To address this, We
-      propose a novel model called <span style="font-weight: bold;">intra- and inter-attention network (IIANet)</span>, which leverages the attention
+      propose a novel model called <span style="font-weight: bold;">intra- and inter-attention network (IIANet)</span>,
+      which leverages the attention
       mechanism for efficient audio-visual feature fusion. IIANet consists of two types of attention blocks:
       intra-attention (IntraA) and inter-attention (InterA) blocks, where the InterA blocks are distributed at the top,
       middle and bottom of IIANet.
       Heavily inspired by the way how human brain selectively focuses on relevant content at various temporal scales,
       these blocks maintain the ability to learn modality-specific features and enable the extraction of different
       semantics from audio-visual features. Comprehensive experiments on three standard audio-visual separation
-      benchmarks (LRS2, LRS3, and VoxCeleb2) demonstrate the effectiveness of IIANet, <span style="font-weight: bold;">outperforming previous
-      state-of-the-art methods</span> while maintaining comparable inference time. In particular, the fast version of IIANet
-      (IIANet-fast) has <span style="font-weight: bold;">only 7% of CTCNet’s MACs and is 40% faster than CTCNet on CPUs</span> while achieving better
+      benchmarks (LRS2, LRS3, and VoxCeleb2) demonstrate the effectiveness of IIANet, <span
+        style="font-weight: bold;">outperforming previous
+        state-of-the-art methods</span> while maintaining comparable inference time. In particular, the fast version of
+      IIANet
+      (IIANet-fast) has <span style="font-weight: bold;">only 7% of CTCNet’s MACs and is 40% faster than CTCNet on
+        CPUs</span> while achieving better
       separation quality, showing the great potential of attention mechanism for efficient and effective multimodal
       fusion.
     </p>
@@ -2068,54 +2099,343 @@
     </div>
     <div style="margin: auto; margin-top: auto" align="center">
       <p class="abstract">
-        We conducted evaluations of various Audio-Visual Source Separation (AVSS) methods, including AVConvTasNet,
+        We conducted evaluations of various Audio-Visual Source Separation (AVSS) methods, including
         Visualvoice, and CTCNet, in real-world scenarios. These scenarios were derived from multi-speaker videos
         collected
-        from YouTube. Upon reviewing these results, it becomes evident that our SCANet outperforms other separation
+        from YouTube. Upon reviewing these results, it becomes evident that our IIANet outperforms other separation
         models
         by generating higher-quality separated audio.
       </p>
-    </div>
-    <br>
-  </div>
-  </div>
-  <div class="figure-caption" style="margin-top: auto;">
-    <div class="content" style="margin-top: 50px;">
-      <!-- <div class="figure" style="height: 300px; background-image: url(figures/overview.png); margin-top: -30px;"></div> -->
-      <div class="content-video" style="margin-bottom: 40px">
-        <div class="content-video-container">
-          <video playsinline="" loop="" preload="" controls="" width="50%">
-            <source src="https://aaai-1253836035.cos.accelerate.myqcloud.com/sample1-final.mp4" type="video/mp4">
-          </video>
+      <h3 style="font-weight: bold; color: #ECAEA7">Demo 1</h3>
+      <div class="abstract" style="display: flex; justify-content: center;">
+        <div class="col-md-7 col-sm-4">
+          <div class="card" style="margin-bottom: 10px;">
+            <div>
+              <!-- <div class="figure" style="height: 300px; background-image: url(figures/overview.png); margin-top: -30px;"></div> -->
+              <!-- <div class="content-video" style="margin-bottom: 40px"> -->
+              <div class="content-video-container">
+                <video playsinline="" loop="" preload="" controls="" width="100%">
+                  <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample1/original.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+              <!-- </div> -->
+            </div>
+            <div class="card-body" style="padding: 0.5rem">
+              <h5 class="card-title text-center">Original</h5>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="figure-caption" style="margin-top: auto;">
-    <div class="content" style="margin-top: 50px;">
-      <!-- <div class="figure" style="height: 300px; background-image: url(figures/overview.png); margin-top: -30px;"></div> -->
-      <div class="content-video" style="margin-bottom: 40px">
-        <div class="content-video-container">
-          <video playsinline="" loop="" preload="" controls="" width="50%">
-            <source src="https://aaai-1253836035.cos.accelerate.myqcloud.com/sample2-final.mp4" type="video/mp4">
-          </video>
+
+      <div class="abstract" style="display: flex; justify-content: center; margin-bottom: 10px;">
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample1/iianet-s1.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center"><span style="font-weight: bold; color:hsl(0, 67%, 61%)">IIANet SPK1 (Ours)</span></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample1/iianet-s2.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center"><span style="font-weight: bold; color:hsl(0, 67%, 61%)">IIANet SPK2 (Ours)</span></h5>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  </div>
-  <div class="figure-caption" style="margin-top: auto;">
-    <div class="content" style="margin-top: 50px;">
-      <!-- <div class="figure" style="height: 300px; background-image: url(figures/overview.png); margin-top: -30px;"></div> -->
-      <div class="content-video" style="margin-bottom: 40px">
-        <div class="content-video-container">
-          <video playsinline="" loop="" preload="" controls="" width="50%">
-            <source src="https://aaai-1253836035.cos.accelerate.myqcloud.com/sample3-final.mp4" type="video/mp4">
-          </video>
+
+      <div class="abstract" style="display: flex; justify-content: center; margin-bottom: 10px;">
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample1/vs-s1.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center">Visualvoice SPK1</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample1/vs-s2.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center">Visualvoice SPK2</h5>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+
+      <div class="abstract" style="display: flex; justify-content: center; margin-bottom: 10px;">
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample1/ctcnet-s1.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center">CTCNet SPK1</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample1/ctcnet-s2.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center">CTCNet SPK2</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <h3 style="font-weight: bold; color: #ECAEA7">Demo 2</h3>
+      <div class="abstract" style="display: flex; justify-content: center;">
+        <div class="col-md-7 col-sm-4">
+          <div class="card" style="margin-bottom: 10px;">
+            <div>
+              <!-- <div class="figure" style="height: 300px; background-image: url(figures/overview.png); margin-top: -30px;"></div> -->
+              <!-- <div class="content-video" style="margin-bottom: 40px"> -->
+              <div class="content-video-container">
+                <video playsinline="" loop="" preload="" controls="" width="100%">
+                  <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample2/original.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+              <!-- </div> -->
+            </div>
+            <div class="card-body" style="padding: 0.5rem">
+              <h5 class="card-title text-center">Original</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="abstract" style="display: flex; justify-content: center; margin-bottom: 10px;">
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample2/iianet-s1.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center"><span style="font-weight: bold; color:hsl(0, 67%, 61%)">IIANet SPK1 (Ours)</span></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample2/iianet-s2.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center"><span style="font-weight: bold; color:hsl(0, 67%, 61%)">IIANet SPK2 (Ours)</span></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="abstract" style="display: flex; justify-content: center; margin-bottom: 10px;">
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample2/vs-s1.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center">Visualvoice SPK1</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample2/vs-s2.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center">Visualvoice SPK2</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="abstract" style="display: flex; justify-content: center; margin-bottom: 10px;">
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample2/ctcnet-s1.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center">CTCNet SPK1</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample2/ctcnet-s2.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center">CTCNet SPK2</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <h3 style="font-weight: bold; color: #ECAEA7">Demo 3</h3>
+      <div class="abstract" style="display: flex; justify-content: center;">
+        <div class="col-md-7 col-sm-4">
+          <div class="card" style="margin-bottom: 10px;">
+            <div>
+              <!-- <div class="figure" style="height: 300px; background-image: url(figures/overview.png); margin-top: -30px;"></div> -->
+              <!-- <div class="content-video" style="margin-bottom: 40px"> -->
+              <div class="content-video-container">
+                <video playsinline="" loop="" preload="" controls="" width="100%">
+                  <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample3/original.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+              <!-- </div> -->
+            </div>
+            <div class="card-body" style="padding: 0.5rem">
+              <h5 class="card-title text-center">Original</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="abstract" style="display: flex; justify-content: center; margin-bottom: 10px;">
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample3/iianet-s1.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center"><span style="font-weight: bold; color:hsl(0, 67%, 61%)">IIANet SPK1 (Ours)</span></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample3/iianet-s2.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center"><span style="font-weight: bold; color:hsl(0, 67%, 61%)">IIANet SPK2 (Ours)</span></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="abstract" style="display: flex; justify-content: center; margin-bottom: 10px;">
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample3/vs-s1.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center">Visualvoice SPK1</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample3/vs-s2.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center">Visualvoice SPK2</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="abstract" style="display: flex; justify-content: center; margin-bottom: 10px;">
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample3/ctcnet-s1.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center">CTCNet SPK1</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="content-video-container">
+              <video playsinline="" loop="" preload="" controls="" width="100%">
+                <source src="https://icml-1253836035.cos.na-siliconvalley.myqcloud.com/sample3/ctcnet-s2.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body" style="padding: 0.5rem;">
+              <h5 class="card-title text-center">CTCNet SPK2</h5>
+            </div>
+          </div>
+        </div>
+      </div>
 
   <script>
     // 获取按钮和所有隐藏视频容器的引用
