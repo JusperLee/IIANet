@@ -30,13 +30,11 @@ This repository is an official implementation of the IIANet accepted to **ICML 2
 
 ## 🚀Overall Pipeline
 
-<video width="900" src="https://cslikai.cn/IIANet/figures/overall.mp4" type="video/mp4">
-              </video>
+![overall](figures/overall.gif)
 
 ## 🪢IIANet Architecture
 
-<video width="900" src="https://cslikai.cn/IIANet/figures/separation.mp4" type="video/mp4">
-              </video>
+![separation](figures/separation.gif)
 
 ## 🔧Installation
 

@@ -30,13 +30,11 @@
 
 ## 🚀整体流程
 
-<video width="900" src="https://cslikai.cn/IIANet/figures/overall.mp4" type="video/mp4">
-              </video>
+![overall](figures/overall.gif)
 
 ## 🪢IIANet架构
 
-<video width="900" src="https://cslikai.cn/IIANet/figures/separation.mp4" type="video/mp4">
-              </video>
+![separation](figures/separation.gif)
 
 ## 🔧安装
 
