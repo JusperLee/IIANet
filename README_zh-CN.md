@@ -30,12 +30,12 @@
 
 ## 🚀整体流程
 
-<video playsinline="" autoplay="" loop="" preload="" muted="" width="900" src="https://cslikai.cn/IIANet/figures/overall.mp4" type="video/mp4">
+<video width="900" src="https://cslikai.cn/IIANet/figures/overall.mp4" type="video/mp4">
               </video>
 
 ## 🪢IIANet架构
 
-<video playsinline="" autoplay="" loop="" preload="" muted="" width="900" src="https://cslikai.cn/IIANet/figures/separation.mp4" type="video/mp4">
+<video width="900" src="https://cslikai.cn/IIANet/figures/separation.mp4" type="video/mp4">
               </video>
 
 ## 🔧安装

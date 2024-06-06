@@ -30,12 +30,12 @@ This repository is an official implementation of the IIANet accepted to **ICML 2
 
 ## 🚀Overall Pipeline
 
-<video playsinline="" autoplay="" loop="" preload="" muted="" width="900" src="https://cslikai.cn/IIANet/figures/overall.mp4" type="video/mp4">
+<video width="900" src="https://cslikai.cn/IIANet/figures/overall.mp4" type="video/mp4">
               </video>
 
 ## 🪢IIANet Architecture
 
-<video playsinline="" autoplay="" loop="" preload="" muted="" width="900" src="https://cslikai.cn/IIANet/figures/separation.mp4" type="video/mp4">
+<video width="900" src="https://cslikai.cn/IIANet/figures/separation.mp4" type="video/mp4">
               </video>
 
 ## 🔧Installation
