@@ -1,0 +1,6 @@
+*.tar
+*.json
+*.pyc
+*.DS_Store
+checkpoints/*
+

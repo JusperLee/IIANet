@@ -1,0 +1,77 @@
+# Network config
+audionet:
+  audionet_name: IIANet
+  audionet_config:
+    out_channels: 128
+    in_channels: 512
+    vpre_channels: 512
+    vin_channels: 64
+    vout_channels: 64
+    num_blocks: 16
+    upsampling_depth: 5
+    enc_kernel_size: 1 # ms
+    num_sources: 1
+
+videonet:
+  videonet_name: ResNetVideoModel
+  videonet_config:
+    pretrain: pretrain_zoo/lrw_resnet18_mstcn_adamw_s3.pth.tar
+
+# Loss config
+loss:
+  train:
+    loss_func: PITLossWrapper
+    sdr_type: pairwise_neg_snr
+    config:
+      pit_from: pw_mtx
+      threshold_byloss: false
+  val:
+    loss_func: PITLossWrapper
+    sdr_type: pairwise_neg_sisdr
+    config:
+      pit_from: pw_mtx
+      threshold_byloss: false
+
+# Training config
+training:
+  system: AudioVisualLightningModule
+  gpus: [0,1,2,3,4,5,6,7]
+  parallel: ddp
+  epochs: 500
+  early_stop:
+    monitor: val_loss/dataloader_idx_0
+    mode: min
+    patience: 20
+    verbose: true
+  
+# Optim config
+optimizer:
+  optim_name: adam
+  lr: 0.001
+  weight_decay: 0.
+
+# Sche config
+scheduler: 
+  sche_name: ReduceLROnPlateau
+  sche_config:
+    patience: 10
+    factor: 0.5
+
+# Data config
+datamodule:
+  data_name: AVSpeechDyanmicDataModule
+  data_config:
+    train_dir: DataPreProcess/LRS2/tr
+    valid_dir: DataPreProcess/LRS2/cv
+    test_dir: DataPreProcess/LRS2/tt
+    n_src: 1
+    sample_rate: 16000
+    segment: 2.0
+    normalize_audio: false
+    batch_size: 3
+    num_workers: 24
+    pin_memory: true
+    persistent_workers: false
+  
+exp:
+  exp_name: LRS2-IIANet
