@@ -30,14 +30,12 @@ This repository is an official implementation of the IIANet accepted to **ICML 2
 
 ## 🚀Overall Pipeline
 
-<video playsinline="" autoplay="" loop="" preload="" muted="" width="900">
-                <source src="figures/overall.mp4" type="video/mp4">
+<video playsinline="" autoplay="" loop="" preload="" muted="" width="900" src="figures/overall.mp4" type="video/mp4">
               </video>
 
 ## 🪢IIANet Architecture
 
-<video playsinline="" autoplay="" loop="" preload="" muted="" width="900">
-                <source src="figures/separation.mp4" type="video/mp4">
+<video playsinline="" autoplay="" loop="" preload="" muted="" width="900" src="figures/separation.mp4" type="video/mp4">
               </video>
 
 ## 🔧Installation

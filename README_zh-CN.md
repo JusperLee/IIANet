@@ -30,14 +30,12 @@
 
 ## 🚀整体流程
 
-<video playsinline="" autoplay="" loop="" preload="" muted="" width="900">
-                <source src="figures/overall.mp4" type="video/mp4">
+<video playsinline="" autoplay="" loop="" preload="" muted="" width="900" src="figures/overall.mp4" type="video/mp4">
               </video>
 
 ## 🪢IIANet架构
 
-<video playsinline="" autoplay="" loop="" preload="" muted="" width="900">
-                <source src="figures/separation.mp4" type="video/mp4">
+<video playsinline="" autoplay="" loop="" preload="" muted="" width="900" src="figures/separation.mp4" type="video/mp4">
               </video>
 
 ## 🔧安装
