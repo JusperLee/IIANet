@@ -351,25 +351,27 @@ def crop_mouth(video_direc, landmark_direc, filename_path, save_direc, convert_g
 
 if __name__ == '__main__':
     
-    os.environ["CUDA_VISIBLE_DEVICES"] = "8"
+    os.environ["CUDA_VISIBLE_DEVICES"] = "9"
     
     input_file = './test_videos/video.mp4'
     temp_output_file = './test_videos/video25fps.mp4'
     final_output_file = './test_videos/video.mp4'
     output_path = "./test_videos/video/"
-    subprocess.run(['ffmpeg', '-i', input_file, '-filter:v', 'fps=fps=25', temp_output_file])
+    number_of_speakers = 2
+    
+    # subprocess.run(['ffmpeg', '-i', input_file, '-filter:v', 'fps=fps=25', temp_output_file])
 
-    os.rename(temp_output_file, final_output_file)
+    # os.rename(temp_output_file, final_output_file)
 
-    print(f'File has been converted and saved to {final_output_file}')
+    # print(f'File has been converted and saved to {final_output_file}')
     
-    filename_path = detectface(video_input_path=final_output_file, output_path=output_path, detect_every_N_frame=8, scalar_face_detection=1.5, number_of_speakers=2)
+    # filename_path = detectface(video_input_path=final_output_file, output_path=output_path, detect_every_N_frame=8, scalar_face_detection=1.5, number_of_speakers=number_of_speakers)
     
-    # extract audio
-    subprocess.run(['ffmpeg', '-i', final_output_file, '-vn', '-ar', '16000', '-ac', '1', '-ab', '192k', '-f', 'wav', os.path.join(output_path, 'audio.wav')])
+    # # extract audio
+    # subprocess.run(['ffmpeg', '-i', final_output_file, '-vn', '-ar', '16000', '-ac', '1', '-ab', '192k', '-f', 'wav', os.path.join(output_path, 'audio.wav')])
     
-    # crop mouth
-    crop_mouth(video_direc=output_path+"faces/", landmark_direc=output_path+"landmark/", filename_path=filename_path, save_direc=output_path+"mouthroi/", convert_gray=True, testset_only=False)
+    # # crop mouth
+    # crop_mouth(video_direc=output_path+"faces/", landmark_direc=output_path+"landmark/", filename_path=filename_path, save_direc=output_path+"mouthroi/", convert_gray=True, testset_only=False)
     
     # Load training config
     with open("checkpoints/vox2/conf.yml", "rb") as f:
@@ -386,7 +388,7 @@ if __name__ == '__main__':
     videomodel.eval()
     
     with torch.no_grad():
-        for i in range(2):
+        for i in range(number_of_speakers):
             mouth_roi = np.load(output_path+"mouthroi/speaker"+str(i+1)+".npz")["data"]
             mouth_roi = get_preprocessing_pipelines()["val"](mouth_roi)
             
@@ -396,3 +398,18 @@ if __name__ == '__main__':
             est_sources = audiomodel(mix[None], mouth_emb)
             
             torchaudio.save(output_path+"speaker"+str(i+1)+"_est.wav", est_sources[0].cpu(), 16000)
+            
+    # FFmpeg命令
+    for i in range(number_of_speakers):
+        command = [
+            'ffmpeg',
+            '-i', output_path+f"video_tracked{i+1}.mp4", 
+            '-i', output_path+"speaker"+str(i+1)+"_est.wav",
+            '-c:v', 'copy',         
+            '-c:a', 'aac',        
+            '-strict', 'experimental',
+            '-map', '0:v:0',      
+            '-map', '1:a:0',   
+            output_path+f"s{i+1}.mp4" 
+        ]
+        subprocess.run(command)
