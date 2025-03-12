@@ -323,8 +323,8 @@ def crop_mouth(video_direc, landmark_direc, filename_path, save_direc, convert_g
         landmarks_pathname = os.path.join(landmark_direc, filename+'.npz')
         dst_pathname = os.path.join( save_direc, filename+'.npz')
 
-        if os.path.exists(dst_pathname):
-            continue
+        # if os.path.exists(dst_pathname):
+        #    continue
 
         multi_sub_landmarks = np.load(landmarks_pathname, allow_pickle=True)['data']
         landmarks = [None] * len(multi_sub_landmarks)
